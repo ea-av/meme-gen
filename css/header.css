@@ -1,0 +1,17 @@
+ 
+  .arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;    
+    border-top: 30px solid #000;
+    position: absolute;
+    margin: 50px 0 0 18px;
+    z-index: 2
+  }
+
+  .arrow {
+      margin-top: 5px;
+  }
+  
+  

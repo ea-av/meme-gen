@@ -4,6 +4,7 @@ header{
     align-items: center;
     background-color: black;
     color: white;
+    height: 70px;
 }
 nav{
     display: flex;
@@ -17,6 +18,5 @@ ul{
  justify-content: space-between;
  display: flex;
  align-self: center;
- width: 100%;
-
+ width: 100%
 }
