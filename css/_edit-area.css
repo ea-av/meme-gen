@@ -12,3 +12,15 @@
     align-content: center;
     
 }
+
+.edit-func-container{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-flow: column nowrap;
+}
+
+.close-butoon-container button{
+    width: 20px;
+    height: 20px;
+}
