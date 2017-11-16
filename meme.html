@@ -8,14 +8,31 @@
     <link rel="stylesheet" href="lib/normalize.css">
     <link rel="stylesheet" href="css/meme.css">
     <title>meme-gen</meme-gen></title>
+
 </head>
 
 <body>
     <div class="modal search" style="display:none">
         MODAL search
     </div>
-    <div class="modal editor" style="display:none">
-        MODAL editor
+    <div class="modal editor" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">edit your meme</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="main-container">
         <header>
