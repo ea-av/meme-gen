@@ -21,12 +21,16 @@
     <div class="main-container">
         <header>
             <nav>
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
+                <ul class="main-nav-left">
+                    <li>Portfolio</li>
+                    <li>About</li>
+                </ul>
+                <ul class="main-nav-center">
                     <li><img class="arrow" src="img/header_arrow.png" /></li>
-                    <li>4</li>
-                    <li>5</li>
+                </ul>
+                <ul class="main-nav-right">
+                    <li>Heat Map</li>
+                    <li><input type="text" id="search-box" onkeyup="searchOnEnter(event, this)" placeholder="keyword1, keyword2..." /></li>
                 </ul>
             </nav>
             <div class="arrow-down"></div>
@@ -53,18 +57,9 @@
         </div>
 
         <div class="imgs-container">
-            <div class="img-container">
-                <img id="1" src="img/img1.jpg" onclick="openEditMod(this)" alt="">
-            </div>
-            <div class="img-container">
-                <img id="2" src="img/img2.jpg" onclick="openEditMod(this)" alt="">
-            </div>
-            <div class="img-container">
-                <img id="3" src="img/img3.jpg" onclick="openEditMod(this)" alt="">
-            </div>
-            <div class="img-container">
-                <img id="4" src="img/img4.jpg" onclick="openEditMod(this)" alt="">
-            </div>
+            <!-- <div class="img-container">
+                <img id="1" src="img/1-t.jpg" onclick="openEditMod(this)" alt="">
+            </div> -->
         </div>
     </div>
 

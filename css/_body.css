@@ -2,3 +2,22 @@
 .main-container{
     height: 100%;
 }
+
+.imgs-container {
+    margin: 50px 50px 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+
+.img-container img {
+    width: 200px
+}
