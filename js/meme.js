@@ -72,6 +72,7 @@ renderImgs(gImgs);
 //     elImgs.innerHTML = strHtml;
 // }
 
+
 function renderImgs(imgs) {
     var strHtml = '';
     var elImgs = document.querySelector('.imgs-container');
@@ -117,6 +118,7 @@ function filterByKeywords(keywords) {
 }
 
 //===== KEYWORDS HEATMAP =====
+//===== Need to solve a minor issue with width of border affecting few words. check the margin of the inner box
 
 function countKeywords() {
     var keywordCount = {};
