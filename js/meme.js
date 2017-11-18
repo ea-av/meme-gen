@@ -1,7 +1,7 @@
 'use strict'
 
 //Global variable here
-var gImgs=[];
+var gImgs = [];
 // var gImgs = [
 //     {id:1, url:'img/1-t.jpg', keyword:['wilder', 'sad', 'emotional', 'famous', 'cute']},
 //     {id:2, url:'img/2-t.jpg', keyword:['sean bean', 'happy', 'lively', 'smug', 'rich']},
@@ -28,9 +28,9 @@ var gImgs=[];
 // ===== DATA STURCTURE =====
 function generateImg(id, url, keywords) {
     var img = {
-    id,
-    url,
-    keywords
+        id,
+        url,
+        keywords
     }
     gImgs.push(img);
 }
@@ -67,7 +67,7 @@ function renderImgs(imgs) {
     for (let i = 0; i < imgs.length; i++) {
         strHtml += `<div class="img-container">
                         <img id="${imgs[i].id}" src="${imgs[i].url}" onclick="openEditMod(this)" alt="">
-                    </div>`       
+                    </div>`
     }
     elImgs.innerHTML = strHtml;
 }
@@ -84,7 +84,7 @@ function searchOnEnter(ev, textInput) {
 
 function searchByKeywords(keywordsStr) {
     var keywords = keywordsStr.split(',');
-    keywords = keywords.map(function(keyword) {
+    keywords = keywords.map(function (keyword) {
         keyword = keyword.trim();
         return keyword.toLowerCase();
     });
@@ -92,12 +92,12 @@ function searchByKeywords(keywordsStr) {
 }
 
 function filterByKeywords(keywords) {
-    var filteredImgs = gImgs.filter(function(img) {
-      return keywords.some(function(keyword) {
-        return img.keywords.includes(keyword);
-      }); 
+    var filteredImgs = gImgs.filter(function (img) {
+        return keywords.some(function (keyword) {
+            return img.keywords.includes(keyword);
+        });
     });
-    renderImgs(filteredImgs); 
+    renderImgs(filteredImgs);
     return filteredImgs;
 }
 
@@ -105,8 +105,8 @@ function filterByKeywords(keywords) {
 
 function countKeywords() {
     var keywordCount = {};
-    gImgs.forEach(function(img) {
-        img.keywords.forEach(function(keyword) {            
+    gImgs.forEach(function (img) {
+        img.keywords.forEach(function (keyword) {
             if (keywordCount[keyword]) {
                 keywordCount[keyword]++;
             }
@@ -118,7 +118,7 @@ function countKeywords() {
     return keywordCount;
 }
 
-function renderKeywordsHeatmap () {
+function renderKeywordsHeatmap() {
     var elHeatmap = document.querySelector(".heatmap-container");
     var strHtml = `<ul class="ADD-some-CLASSES-with-FLEX-options" style="display: flex; flex-wrap: wrap">`; //REMOVE INNER STYLE AND SET IN CSS
     var keywordCount = countKeywords();
@@ -132,5 +132,17 @@ function renderKeywordsHeatmap () {
     elHeatmap.innerHTML = strHtml;
 }
 
-// renderKeywordsHeatmap(); // TEMPORARY CALL TO HEATMAP SHOULD BE REPLACED BY MENU ITEMS
+document.querySelector(".arrow").addEventListener("click", function () {
+    console.log('clicked')
+    document.querySelector(".arrow").classList.add("spin-effect");
+    // document.querySelector(".arrow").classList.remove("spin-effect");
+    removeCssAnimationClass();
+
+});
+
+function removeCssAnimationClass() {
+    setTimeout(function () {
+        document.querySelector(".arrow").classList.remove("spin-effect");
+    }, 400);
+}
 
