@@ -47,10 +47,11 @@ li button {
 }
 
 li button:focus {
-   /* outline: 1px solid #d3d3d3; */
-   outline: none;
+    outline: 2px solid #acacac; 
+   /*outline: none;
    border: 2px solid #acacac;
-   border-radius:5px
+   border-radius:5px;
+   box-sizing: border-box;*/
 }
 
 li button:hover {

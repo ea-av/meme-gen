@@ -104,6 +104,28 @@ li{
     /*z-index: 2*/
   }
 
+  .seperator {
+    width: 100%; 
+    height: 0; 
+    /*border-left: 50px solid transparent;
+    border-right: 50px solid transparent;    
+    border-top: 30px solid #323232;*/
+    /*border-bottom: 1px solid #323232;*/
+    position: absolute;
+    margin: 50px 0 0 0;
+    display:flex;
+    justify-content: space-around
+    /*z-index: 2*/
+  }
+
+  .line {
+    width: 34%;
+    border-bottom: 1px solid #e4e9eb;
+    align-self: center
+    /*position: absolute;*/
+    /*margin: 50px 0 0 0;*/
+  }
+
   .spin-effect {  
     animation-name: spin;
     animation-duration: 300ms;
