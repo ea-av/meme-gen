@@ -2,3 +2,7 @@
 .main-container{
     height: 100%;
 }
+
+.imgs-container{
+    display: block;
+}

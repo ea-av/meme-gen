@@ -30,6 +30,19 @@
             </nav>
         </header>
 
+        <canvas width="568" height="360" id="canvas">
+                Sorry, no canvas available
+            </canvas>
+            <br/>
+        
+            <a href="#" download="puki.txt">HERE</a>
+        
+            <hr />
+        
+            <a href="#" id="download" onclick="downloadImg(this)">
+                  Download as image
+              </a>
+              
         <div class="edit-area">
             <div class="edit-area-containor">
 
@@ -38,15 +51,30 @@
                 </div>
 
                 <div class="edit-func-container">
-                    <p>left-right<input class="LRC-selctor" type="radio"> </p>
-                    <p>font szie <input class="font-size" type="range"></p>
-                    <p>color <input class="font-color" type="color"></p>
-                    <p>shedow toogel <input class="Text-shadow" type="checkbox"></p>
-                    <p>font type <input class="" type="scrole"></p>
-                    
+                    <p>left-right
+                        <input class="LRC-selctor" type="radio"> </p>
+                    <p>font szie
+                        <input class="font-size" type="range">
+                    </p>
+                    <p>color
+                        <input class="font-color" type="color">
+                    </p>
+                    <p>shedow toogel
+                        <input class="Text-shadow" type="checkbox">
+                    </p>
+                    <p>font type
+                        <input class="" type="scrole">
+                    </p>
+
                 </div>
-                <div class="close-butoon-container"></div>
-                <button onclick="closeEditMod()"></button>
+                <div class="close-butoon-container">
+                        <button onclick="closeEditMod()"> facebook</button>
+                        <button onclick="closeEditMod()"> save</button>                        
+                        <button onclick="closeEditMod()"> do-things</button>
+                    </div>
+                <div class="close-butoon-container">
+                    <button onclick="closeEditMod()"> close</button>
+                </div>
             </div>
         </div>
 

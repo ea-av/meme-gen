@@ -5,12 +5,16 @@
     background-color: blue;
     color: yellowgreen;
     display: none;
+    
 }
 .edit-area-containor{
     display: flex;
     justify-content: space-around;
     align-content: center;
-    
+    align-items: center;
+    flex-flow: column nowrap;
+    border: 3px solid greenyellow;
+    border-radius: 10%;
 }
 
 .edit-func-container{
@@ -21,6 +25,10 @@
 }
 
 .close-butoon-container button{
-    width: 20px;
+    width: 60px;
     height: 20px;
+}
+
+#myCanvas {
+    border: 1px solid;
 }
