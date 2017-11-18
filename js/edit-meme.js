@@ -6,9 +6,10 @@ function openEditMod(elImg){
     var elEditArea = document.querySelector('.edit-area');
     var elEditAreaImg = document.querySelector('.edit-area-img');
         elEditArea.style.display = 'block';
-        console.log(elImg.id);
-        console.log(elImg.src);
-        elEditAreaImg.src = elImg.src;
+        // console.log(elImg.id);
+        // console.log(elImg.src);
+        // elEditAreaImg.src = elImg.src;
+        elEditAreaImg.src = `img/${elImg.id}.jpg`;
         // elEditAreaImg.style.margin = 20 px;
 }
 

@@ -21,3 +21,32 @@
 .img-container img {
     width: 200px
 }
+
+.heatmap-container {
+    width: 65%;
+    display: flex;
+    margin:auto
+    
+}
+
+.heatmap-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: center
+}
+
+.heatmap-container ul li{
+    width:auto;
+}
+
+li button {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+
+li button:focus {
+   outline: 1px solid #d3d3d3;
+}
+

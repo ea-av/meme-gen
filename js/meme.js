@@ -26,7 +26,7 @@ var gImgs=[];
 // ];
 
 // ===== DATA STURCTURE =====
-function createImgObj(id, url, keywords) {
+function generateImg(id, url, keywords) {
     var img = {
     id,
     url,
@@ -35,26 +35,26 @@ function createImgObj(id, url, keywords) {
     gImgs.push(img);
 }
 
-createImgObj(1, 'img/1-t.jpg', ['wilder', 'sad', 'emotional', 'famous', 'cute']);
-createImgObj(2, 'img/2-t.jpg', ['sean bean', 'happy', 'lively', 'smug', 'rich']);
-createImgObj(3, 'img/3-t.jpg', ['dicapprio', 'clown', 'in your face', 'slap', 'beautiful']);
-createImgObj(4, 'img/4-t.jpg', ['dr. evil', 'sad', 'emotional', 'famous', 'cute']);
-createImgObj(5, 'img/5-t.jpg', ['batman', 'happy', 'lively', 'smug', 'rich']);
-createImgObj(6, 'img/6-t.jpg', ['toy story', 'sad', 'emotional', 'famous', 'cute']);
-createImgObj(7, 'img/7-t.jpg', ['ted', 'pet', 'animle', 'cute', 'lovable']);
-createImgObj(8, 'img/8-t.jpg', ['oprah', 'sad', 'emotional', 'famous', 'cute']);
-createImgObj(9, 'img/9-t.jpg', ['cigar', 'sad', 'emotional', 'famous', 'cute']);
-createImgObj(10, 'img/10-t.jpg', ['dog', 'happy', 'lively', 'smug', 'rich']);
-createImgObj(11, 'img/11-t.jpg', ['sad', 'bear', 'lively', 'smug', 'rich']);
-createImgObj(12, 'img/12-t.jpg', ['john goodman', 'happy', 'lively', 'smug', 'rich']);
-createImgObj(13, 'img/13-t.jpg', ['granny', 'happy', 'lively', 'smug', 'rich']);
-createImgObj(14, 'img/14-t.jpg', ['seal', 'content', 'lively', 'smug', 'rich']);
-createImgObj(15, 'img/15-t.jpg', ['toddler', 'happy', 'lively', 'smug', 'rich']);
-createImgObj(16, 'img/16-t.jpg', ['precious', 'gollum', 'animle', 'cute', 'lovable']);
-createImgObj(17, 'img/17-t.jpg', ['drunk', 'pet', 'animle', 'cute', 'lovable']);
-createImgObj(18, 'img/18-t.jpg', ['a team', 'pet', 'animle', 'cute', 'lovable']);
-createImgObj(19, 'img/19-t.jpg', ['will farrel', 'clown', 'animle', 'cute', 'lovable']);
-createImgObj(20, 'img/20-t.jpg', ['crying', 'pet', 'animle', 'cute', 'lovable']);
+generateImg(1, 'img/1-t.jpg', ['wilder', 'sad', 'emotional', 'famous', 'cute']);
+generateImg(2, 'img/2-t.jpg', ['sean bean', 'happy', 'lively', 'smug', 'rich']);
+generateImg(3, 'img/3-t.jpg', ['dicapprio', 'clown', 'in your face', 'slap', 'beautiful']);
+generateImg(4, 'img/4-t.jpg', ['dr. evil', 'sad', 'emotional', 'famous', 'cute']);
+generateImg(5, 'img/5-t.jpg', ['batman', 'happy', 'lively', 'smug', 'rich']);
+generateImg(6, 'img/6-t.jpg', ['toy story', 'sad', 'emotional', 'famous', 'cute']);
+generateImg(7, 'img/7-t.jpg', ['ted', 'pet', 'animle', 'cute', 'lovable']);
+generateImg(8, 'img/8-t.jpg', ['oprah', 'sad', 'emotional', 'famous', 'cute']);
+generateImg(9, 'img/9-t.jpg', ['cigar', 'sad', 'emotional', 'famous', 'cute']);
+generateImg(10, 'img/10-t.jpg', ['dog', 'happy', 'lively', 'smug', 'rich']);
+generateImg(11, 'img/11-t.jpg', ['sad', 'bear', 'lively', 'smug', 'rich']);
+generateImg(12, 'img/12-t.jpg', ['john goodman', 'happy', 'lively', 'smug', 'rich']);
+generateImg(13, 'img/13-t.jpg', ['granny', 'happy', 'lively', 'smug', 'rich']);
+generateImg(14, 'img/14-t.jpg', ['seal', 'content', 'lively', 'smug', 'rich']);
+generateImg(15, 'img/15-t.jpg', ['toddler', 'happy', 'lively', 'smug', 'rich']);
+generateImg(16, 'img/16-t.jpg', ['precious', 'gollum', 'animle', 'cute', 'lovable']);
+generateImg(17, 'img/17-t.jpg', ['drunk', 'pet', 'animle', 'cute', 'lovable']);
+generateImg(18, 'img/18-t.jpg', ['a team', 'pet', 'animle', 'cute', 'lovable']);
+generateImg(19, 'img/19-t.jpg', ['will farrel', 'clown', 'animle', 'cute', 'lovable']);
+generateImg(20, 'img/20-t.jpg', ['crying', 'pet', 'animle', 'cute', 'lovable']);
 
 //===== RENDER OF ENTIRE DATABASE ===== (TODO: should be called by init onload and by dedicated button(s))
 renderImgs(gImgs);
@@ -125,7 +125,7 @@ function renderKeywordsHeatmap () {
     var keyword = '';
     for (keyword in keywordCount) {
         strHtml += `<li>
-                       <button onclick="searchByKeywords('${keyword}')" style="font-size: ${0.5 * keywordCount[keyword]}rem">${keyword}</button>
+                       <button onclick="searchByKeywords('${keyword}')" style="font-size: ${0.75 * keywordCount[keyword]}rem">${keyword}</button>
                     </li>`;
     }
     strHtml += `</ul>`;
