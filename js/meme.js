@@ -61,15 +61,30 @@ renderImgs(gImgs);
 
 //===== RENDERING IMAGES SELECTION SECTION =====
 
+// function renderImgs(imgs) {
+//     var strHtml = '';
+//     var elImgs = document.querySelector('.imgs-container');
+//     for (let i = 0; i < imgs.length; i++) {
+//         strHtml += `<div class="img-container">
+//                         <img class="animated bounceInUp" id="${imgs[i].id}" src="${imgs[i].url}" onclick="openEditMod(this)" alt="">
+//                     </div>`
+//     }
+//     elImgs.innerHTML = strHtml;
+// }
+
 function renderImgs(imgs) {
     var strHtml = '';
     var elImgs = document.querySelector('.imgs-container');
-    for (let i = 0; i < imgs.length; i++) {
-        strHtml += `<div class="img-container">
-                        <img id="${imgs[i].id}" src="${imgs[i].url}" onclick="openEditMod(this)" alt="">
-                    </div>`
-    }
     elImgs.innerHTML = strHtml;
+    imgs.forEach(function(el,idx) {
+        setTimeout(function() {
+            console.log(el);
+            strHtml = `<div class="img-container">
+                        <img class="animated bounceInUp" id="${imgs[idx].id}" src="${imgs[idx].url}" onclick="openEditMod(this)" alt="">
+                       </div>`;
+            elImgs.insertAdjacentHTML('beforeend', strHtml);
+        }, idx * 50);
+    });
 }
 
 // ===== SEARCH, FILTER AND RENDER SEARCHED IMAGES FOR SELECTION =====
@@ -197,19 +212,35 @@ function renderKeywordsHeatmap() {
 //=========
 
 
-//===== ANIMATING ARROW =====
+//===== ANIMATIONS =====
+
+// document.querySelector(".arrow").addEventListener("click", function () {
+//     document.querySelector(".arrow").classList.add("spin-effect");
+//     removeCssAnimationClass();
+// });
+
+// function removeCssAnimationClass() {
+//     setTimeout(function () {
+//         document.querySelector(".arrow").classList.remove("spin-effect");
+//     }, 400);
+// }
 
 document.querySelector(".arrow").addEventListener("click", function () {
-    console.log('clicked')
-    document.querySelector(".arrow").classList.add("spin-effect");
-    // document.querySelector(".arrow").classList.remove("spin-effect");
-    removeCssAnimationClass();
+    document.querySelector(".arrow").classList.add("animated", "flipInX");
+    removeCssAnimationClass("animated", "flipInX");
 
 });
 
-function removeCssAnimationClass() {
+function removeCssAnimationClass(classA, classB) {
     setTimeout(function () {
-        document.querySelector(".arrow").classList.remove("spin-effect");
+        document.querySelector(".arrow").classList.remove(classA, classB);
     }, 400);
 }
 
+document.querySelector(".arrow").addEventListener("mouseenter", function () {
+    document.querySelector(".arrow").classList.add("animated", "jello");
+});
+
+document.querySelector(".arrow").addEventListener("mouseleave", function () {
+    document.querySelector(".arrow").classList.remove("animated", "jello");
+});
