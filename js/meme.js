@@ -118,9 +118,45 @@ function countKeywords() {
     return keywordCount;
 }
 
+// function renderKeywordsHeatmap() {
+//     var elHeatmap = document.querySelector(".heatmap-container");
+//     var strHtml = `<ul class="modal-ul" style="display: flex; flex-wrap: wrap">`; //REMOVE INNER STYLE AND SET IN CSS
+//     var keywordCount = countKeywords();
+//     var keyword = '';
+//     for (keyword in keywordCount) {
+//         strHtml += `<li>
+//                        <button onclick="searchByKeywords('${keyword}')" style="font-size: ${0.75 * keywordCount[keyword]}rem">${keyword}</button>
+//                     </li>`;
+//     }
+//     strHtml += `</ul>`;
+//     elHeatmap.innerHTML = strHtml;
+// }
+
+// function renderKeywordsHeatmap() {
+//     var elHeatmap = document.querySelector("#keywordsModal");
+//     var strHtml = `<ul class="modal-ul" style="display: flex; flex-wrap: wrap">`; //REMOVE INNER STYLE AND SET IN CSS
+//     var keywordCount = countKeywords();
+//     var keyword = '';
+//     for (keyword in keywordCount) {
+//         strHtml += `<li>
+//                        <button onclick="searchByKeywords('${keyword}')" style="font-size: ${0.75 * keywordCount[keyword]}rem">${keyword}</button>
+//                     </li>`;
+//     }
+//     strHtml += `</ul>`;
+//     elHeatmap.innerHTML = strHtml;
+// }
+
 function renderKeywordsHeatmap() {
-    var elHeatmap = document.querySelector(".heatmap-container");
-    var strHtml = `<ul class="ADD-some-CLASSES-with-FLEX-options" style="display: flex; flex-wrap: wrap">`; //REMOVE INNER STYLE AND SET IN CSS
+    var elHeatmap = document.querySelector("#keywordsModal");
+    var strHtml = `<div class="modal-dialog modal-lg modal-backdrop" role="document">
+                   <div class="modal-content">
+                        <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                              <ul class="modal-ul" style="display: flex; flex-wrap: wrap">`
     var keywordCount = countKeywords();
     var keyword = '';
     for (keyword in keywordCount) {
@@ -128,9 +164,40 @@ function renderKeywordsHeatmap() {
                        <button onclick="searchByKeywords('${keyword}')" style="font-size: ${0.75 * keywordCount[keyword]}rem">${keyword}</button>
                     </li>`;
     }
-    strHtml += `</ul>`;
+    strHtml += `</ul>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+                </div>`;
     elHeatmap.innerHTML = strHtml;
 }
+
+//=========
+
+// strHtml = `
+// <div class="modal-dialog" role="document">
+// <div class="modal-content">
+//     <div class="modal-header">
+//     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+//         <span aria-hidden="true">&times;</span>
+//     </button>
+//     </div>
+//     <div class="modal-body">
+//     <ul class="modal-ul" style="display: flex; flex-wrap: wrap">
+//     </div>
+//     <div class="modal-footer">
+//     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+//     </div>
+// </div>
+// </div>
+// `
+
+//=========
+
+
+//===== ANIMATING ARROW =====
 
 document.querySelector(".arrow").addEventListener("click", function () {
     console.log('clicked')
