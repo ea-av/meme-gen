@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="lib/normalize.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/meme.css">
+    <link rel="stylesheet" href="lib/animate.css">
     <title>meme-gen</meme-gen>
     </title>
 
@@ -20,78 +22,96 @@
     <div class="main-container">
         <header>
             <nav>
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
+                <ul class="main-nav-left">
+                    <li>
+                        <a>Portfolio</a>
+                    </li>
+                    <li>
+                        <a>About</a>
+                    </li>
+                </ul>
+                <ul class="main-nav-center">
+                    <li>
+                        <img class="arrow" src="img/header_arrow.png" onclick="renderImgs(gImgs)">
+                    </li>
+                </ul>
+                <ul class="main-nav-right">
+                    <!-- <li><a onclick="renderKeywordsHeatmap()">Words Heatmap</a></li> -->
+                    <li>
+                        <a data-toggle="modal" data-target="#keywordsModal" onclick="renderKeywordsHeatmap()">Words Heatmap</a>
+                    </li>
+                    <li>
+                        <input type="text" id="search-box" onkeyup="searchOnEnter(event, this)" placeholder="keyword1, keyword2..." />
+                    </li>
                 </ul>
             </nav>
+            <div class="arrow-down"></div>
         </header>
 
-        <canvas width="568" height="360" id="canvas">
-                Sorry, no canvas available
-            </canvas>
-            <br/>
-        
-            <a href="#" download="puki.txt">HERE</a>
-        
-            <hr />
-        
-            <a href="#" id="download" onclick="downloadImg(this)">
-                  Download as image
-              </a>
-              
+
         <div class="edit-area">
             <div class="edit-area-containor">
+                <canvas width="600" height="400" id="canvas">
+                    <img class="edit-area-img" src="" alt=""> Sorry, no canvas available
+                </canvas>
+                <p class="text-area" contenteditable="true">
+                    enter text
+                </p>
+                <!-- <br/> -->
 
-                <div class="edit-area-img-container">
-                    <img class="edit-area-img" src="" alt="">
-                </div>
+                <a href="#" download="puki.txt">HERE</a>
 
-                <div class="edit-func-container">
-                    <p>left-right
-                        <input class="LRC-selctor" type="radio"> </p>
-                    <p>font szie
-                        <input class="font-size" type="range">
-                    </p>
-                    <p>color
-                        <input class="font-color" type="color">
-                    </p>
-                    <p>shedow toogel
-                        <input class="Text-shadow" type="checkbox">
-                    </p>
-                    <p>font type
-                        <input class="" type="scrole">
-                    </p>
+                <hr />
 
-                </div>
-                <div class="close-butoon-container">
-                        <button onclick="closeEditMod()"> facebook</button>
-                        <button onclick="closeEditMod()"> save</button>                        
-                        <button onclick="closeEditMod()"> do-things</button>
-                    </div>
-                <div class="close-butoon-container">
-                    <button onclick="closeEditMod()"> close</button>
-                </div>
+                <a href="#" id="download" onclick="downloadImg(this)">
+                    Download as image
+                </a>
+            </div>
+
+            <!-- <div class="edit-area-img-container"> -->
+            <!-- <img class="edit-area-img" src="" alt=""> -->
+
+            <!-- </div> -->
+
+            <div class="edit-func-container">
+                <p>left-right
+                    <input class="LRC-selctor" type="radio"> </p>
+                <p>font szie
+                    <input class="font-size" type="range">
+                </p>
+                <p>color
+                    <input class="font-color" type="color">
+                </p>
+                <p>shedow toogel
+                    <input class="Text-shadow" type="checkbox">
+                </p>
+                <p>font type
+                    <input class="" type="scrole">
+                </p>
+
+            </div>
+            <div class="close-butoon-container">
+                <button onclick="closeEditMod()"> facebook</button>
+                <button onclick="closeEditMod()"> save</button>
+                <button onclick="closeEditMod()"> do-things</button>
+                <!-- </div>
+                <div class="close-butoon-container"> -->
+                <button onclick="closeEditMod()"> close</button>
             </div>
         </div>
+    </div>
 
-        <div class="imgs-container">
-            <div class="img-container">
-                <img id="1" src="img/img1.jpg" onclick="openEditMod(this)" alt="">
-            </div>
-            <div class="img-container">
-                <img id="2" src="img/img2.jpg" onclick="openEditMod(this)" alt="">
-            </div>
-            <div class="img-container">
-                <img id="3" src="img/img3.jpg" onclick="openEditMod(this)" alt="">
-            </div>
-            <div class="img-container">
-                <img id="4" src="img/img4.jpg" onclick="openEditMod(this)" alt="">
-            </div>
-        </div>
+    <div class="imgs-container">
+        <!-- <div class="img-container">
+                <img id="1" src="img/1-t.jpg" onclick="openEditMod(this)" alt="">
+            </div> -->
+    </div>
+    </div>
+
+    <!-- TEMPORARY PLACEHOLDER FOR HEATMAP. TODO: SWITCH IT TO MODAL DISPLAY -->
+    <div class="heatmap-container">
+        <!--Keywords Modal-->
+        <div class="modal fade" id="keywordsModal" tabindex="-1" role="dialog" aria-labelledby="keywordsModalLabel" aria-hidden="true"></div>
     </div>
 
 
@@ -105,11 +125,18 @@
         </div>
     </footer>
 
+
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="js/edit-meme.js"></script>
     <script src="js/meme.js"></script>
 </body>
 
 </html>
+
+
+
+
 
 
 

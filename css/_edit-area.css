@@ -5,6 +5,7 @@
     background-color: blue;
     color: yellowgreen;
     display: none;
+    flex-direction: column;
     
 }
 .edit-area-containor{
@@ -18,17 +19,36 @@
 }
 
 .edit-func-container{
+    align-items: center;
+    
     display: flex;
     justify-content: space-around;
     align-content: center;
     flex-flow: column nowrap;
 }
 
+.close-butoon-container{
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
 .close-butoon-container button{
+
     width: 60px;
     height: 20px;
 }
 
 #myCanvas {
     border: 1px solid;
+}
+
+.text-area{
+    /* order: 99; */
+    color: white;
+    background-color: none;
+    position: relative;
+    font-size: 2em;
+     
+    /* padding-top: 20px; */
 }
