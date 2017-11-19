@@ -25,10 +25,10 @@
             <nav>
                 <ul class="main-nav-left">
                     <li>
-                        <a class="nav-link">Portfolio</a>
+                        <a class="nav-link">PORTFOLIO</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about">ABOUT</a>
                     </li>
                 </ul>
                 <ul class="main-nav-center">
@@ -39,10 +39,10 @@
                 <ul class="main-nav-right">
                     <!-- <li><a onclick="renderKeywordsHeatmap()">Words Heatmap</a></li> -->
                     <li>
-                        <a data-toggle="modal" data-target="#keywordsModal" onclick="renderKeywordsHeatmap()">Words Heatmap</a>
+                        <a class="worcloud" data-toggle="modal" data-target="#keywordsModal" onclick="renderKeywordsHeatmap()"><img src='img/wordcloud.png'></a>
                     </li>
                     <li>
-                        <input type="text" id="search-box" onkeyup="searchOnEnter(event, this)" placeholder="keyword1, keyword2..." />
+                        <input class = "search-box" type="text" id="search-box" onkeyup="searchOnEnter(event, this)" placeholder="keyword1, keyword2..." />
                     </li>
                 </ul>
             </nav>
