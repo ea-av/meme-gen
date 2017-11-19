@@ -61,14 +61,13 @@ ul.main-nav-center {
 }
 ul.main-nav-left {
     margin: 0;
-    font-family: Lato;
 }
 .main-nav-right {
     width:40%
 }
 ul.main-nav-right {
     margin: 0;
-    font-family: Lato;
+    font-family: "Lato";
 }
 
 li{
@@ -79,10 +78,19 @@ li{
     width:50%
 }
 
+.main-nav-left li a {
+    font-family: "Lato" !important;
+}
+
 .main-nav-left li a:hover {
     color: #2eb398 !important;
     cursor: default !important;
 }
+
+.main-nav-right li a {
+    font-family: "Lato" !important;
+}
+
 .main-nav-right li a:hover {
     color: #2eb398 !important; 
     cursor: default !important;

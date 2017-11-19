@@ -2,7 +2,8 @@ footer {
     background-color: #2eb398;
     height: 340px;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    flex-direction: column
 }
 
 .about-container {
@@ -39,9 +40,36 @@ footer {
 
 .about-text {
     font-size: 0.75rem;
+    font-family: "Lato";
+    text-align: justify;
 }
 
 .footer-logo {
     align-self: center;
     width: 23%
+}
+
+.social-media-container {
+    display: flex;
+    justify-content: flex-end;
+    align-self:flex-end;
+}
+
+.fb:hover {
+    opacity: 0.5;
+}
+.twtr:hover {
+    opacity: 0.5;
+}
+.goog:hover {
+    opacity: 0.5;
+}
+.pint:hover {
+    opacity: 0.5;
+}
+.lnkd:hover {
+    opacity: 0.5;
+}
+.drib:hover {
+    opacity: 0.5;
 }
