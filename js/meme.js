@@ -35,26 +35,33 @@ function generateImg(id, url, keywords) {
     gImgs.push(img);
 }
 
-generateImg(1, 'img/1-t.jpg', ['wilder', 'sad', 'emotional', 'famous', 'cute']);
-generateImg(2, 'img/2-t.jpg', ['sean bean', 'happy', 'lively', 'smug', 'rich']);
-generateImg(3, 'img/3-t.jpg', ['dicapprio', 'clown', 'in your face', 'slap', 'beautiful']);
-generateImg(4, 'img/4-t.jpg', ['dr. evil', 'sad', 'emotional', 'famous', 'cute']);
-generateImg(5, 'img/5-t.jpg', ['batman', 'happy', 'lively', 'smug', 'rich']);
-generateImg(6, 'img/6-t.jpg', ['toy story', 'sad', 'emotional', 'famous', 'cute']);
-generateImg(7, 'img/7-t.jpg', ['ted', 'pet', 'animle', 'cute', 'lovable']);
-generateImg(8, 'img/8-t.jpg', ['oprah', 'sad', 'emotional', 'famous', 'cute']);
-generateImg(9, 'img/9-t.jpg', ['cigar', 'sad', 'emotional', 'famous', 'cute']);
-generateImg(10, 'img/10-t.jpg', ['dog', 'happy', 'lively', 'smug', 'rich']);
-generateImg(11, 'img/11-t.jpg', ['sad', 'bear', 'lively', 'smug', 'rich']);
-generateImg(12, 'img/12-t.jpg', ['john goodman', 'happy', 'lively', 'smug', 'rich']);
-generateImg(13, 'img/13-t.jpg', ['granny', 'happy', 'lively', 'smug', 'rich']);
-generateImg(14, 'img/14-t.jpg', ['seal', 'content', 'lively', 'smug', 'rich']);
-generateImg(15, 'img/15-t.jpg', ['toddler', 'happy', 'lively', 'smug', 'rich']);
-generateImg(16, 'img/16-t.jpg', ['precious', 'gollum', 'animle', 'cute', 'lovable']);
-generateImg(17, 'img/17-t.jpg', ['drunk', 'pet', 'animle', 'cute', 'lovable']);
-generateImg(18, 'img/18-t.jpg', ['a team', 'pet', 'animle', 'cute', 'lovable']);
-generateImg(19, 'img/19-t.jpg', ['will farrel', 'clown', 'animle', 'cute', 'lovable']);
-generateImg(20, 'img/20-t.jpg', ['crying', 'pet', 'animle', 'cute', 'lovable']);
+generateImg(1, 'img/1-t.jpg', ['wilder', 'funny', 'happy', 'famous', 'cute', 'silly', 'hat', 'bow tie']);
+generateImg(2, 'img/2-t.jpg', ['sean bean', 'stark','irish', 'celebrity', 'brave', 'cool', 'handsosme']);
+generateImg(3, 'img/3-t.jpg', ['dicapprio', 'smug', 'in your face', 'toast', 'handsome', 'celebrity', 'famous']);
+generateImg(4, 'img/4-t.jpg', ['dr. evil', 'funny', 'famous', 'silly', 'british', 'humor', 'austin powers']);
+generateImg(5, 'img/5-t.jpg', ['batman', 'brave', 'cartoon', 'slap', 'lively', 'strong', 'brave', 'movie']);
+generateImg(6, 'img/6-t.jpg', ['toy story', 'cute', 'emotional', 'movie', 'cartoon', 'child', 'famous', 'lovable']);
+generateImg(7, 'img/7-t.jpg', ['ted', 'animle', 'pet', 'cute', 'lovable']);
+generateImg(8, 'img/8-t.jpg', ['oprah', 'rich', 'emotional', 'famous', 'cute']);
+generateImg(9, 'img/9-t.jpg', ['cigar', 'angry', 'emotional', 'bad', 'mean']);
+generateImg(10, 'img/10-t.jpg', ['dog', 'happy', 'lively', 'lovable', 'animle', 'pet']);
+generateImg(11, 'img/11-t.jpg', ['sad', 'bear', 'lively', 'cute', 'pet', 'lovable']);
+generateImg(12, 'img/12-t.jpg', ['john goodman', 'happy', 'lively', 'cool', 'movie', 'famous']);
+generateImg(13, 'img/13-t.jpg', ['granny', 'happy', 'lively', 'funny', 'lovable', 'humor']);
+generateImg(14, 'img/14-t.jpg', ['seal', 'content', 'lively', 'pet', 'animle', 'lovable', 'cute']);
+generateImg(15, 'img/15-t.jpg', ['toddler', 'happy', 'lively', 'funny', 'cute']);
+generateImg(16, 'img/16-t.jpg', ['precious', 'gollum', 'moview', 'ring', 'ugly', 'scary', 'famous']);
+generateImg(17, 'img/17-t.jpg', ['drunk', 'silly', 'dumb', 'ugly', 'lovable', 'homur']);
+generateImg(18, 'img/18-t.jpg', ['a team', 'baracos', 'strong', 'brave', 'famous', 'beard']);
+generateImg(19, 'img/19-t.jpg', ['will farrel', 'clown', 'funny', 'cute', 'lovable']);
+generateImg(20, 'img/20-t.jpg', ['crying', 'emotional', 'sad', 'tears', 'woman']);
+generateImg(21, 'img/21-t.jpg', ['cartoon', 'dumb', 'evil', 'movie', 'simpsons']);
+generateImg(22, 'img/22-t.jpg', ['cat', 'pet', 'animle', 'cute', 'lovable']);
+generateImg(23, 'img/23-t.jpg', ['cat', 'pet', 'animle', 'cute', 'lovable', 'grumpy']);
+generateImg(24, 'img/24-t.jpg', ['hillary', 'woman', 'politician', 'famous', 'presidential']);
+generateImg(25, 'img/25-t.jpg', ['woman', 'famous', 'celebrity', 'singer', 'nicki minaj']);
+generateImg(26, 'img/26-t.jpg', ['cat', 'pet', 'animle', 'cute', 'lovable']);
+generateImg(27, 'img/27-t.jpg', ['obama', 'politician', 'presidential', 'famous', 'celebrity']);
 
 //===== RENDER OF ENTIRE DATABASE ===== (TODO: should be called by init onload and by dedicated button(s))
 renderImgs(gImgs);
@@ -93,7 +100,7 @@ function renderImgs(imgs) {
                         <img class="animated ${animateClass}" id="${imgs[idx].id}" src="${imgs[idx].url}" onclick="openEditMod(this)" alt="">
                        </div>`;
             elImgs.insertAdjacentHTML('beforeend', strHtml);
-        }, idx * 50);
+        }, idx * 30);
     });
 }
 
@@ -174,7 +181,7 @@ function countKeywords() {
 
 function renderKeywordsHeatmap() {
     var elHeatmap = document.querySelector("#keywordsModal");
-    var strHtml = `<div class="modal-dialog modal-lg modal-backdrop" role="document">
+    var strHtml = `<div class="modal-dialog modal-xl modal-backdrop" role="document">
                    <div class="modal-content">
                         <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">

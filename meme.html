@@ -23,36 +23,41 @@
     <div class="main-container">
         <header>
             <nav>
-                <ul class="main-nav-left">
-                    <li>
-                        <a class="nav-link">PORTFOLIO</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#about">ABOUT</a>
-                    </li>
-                </ul>
-                <ul class="main-nav-center">
-                    <li>
-                        <img class="arrow" src="img/header_arrow.png" onclick="renderImgs(gImgs)">
-                    </li>
-                </ul>
-                <ul class="main-nav-right">
-                    <!-- <li><a onclick="renderKeywordsHeatmap()">Words Heatmap</a></li> -->
-                    <li>
-                        <a class="worcloud" data-toggle="modal" data-target="#keywordsModal" onclick="renderKeywordsHeatmap()"><img src='img/wordcloud.png'></a>
-                    </li>
-                    <li>
-                        <input class = "search-box" type="text" id="search-box" onkeyup="searchOnEnter(event, this)" placeholder="keyword1, keyword2..." />
-                    </li>
-                </ul>
+                <div class="main-nav-left">
+                    <a class="nav-link">PORTFOLIO</a>
+                    <a class="nav-link" href="#about">ABOUT</a>
+                </div>
+                <div class="main-nav-center">
+                    <!-- <li> -->
+                    <img class="arrow" src="img/header_arrow.png" onclick="renderImgs(gImgs)">
+                    <!-- </li> -->
+                </div>
+                <div class="main-nav-right">
+                    <div class="main-nav-right-text">
+                        <a class="nav-link">BLOG</a>
+                        <a class="nav-link">GET IN TOUCH</a>
+                    </div>
+                    <div class="search">
+                        <a class="wordcloud" data-toggle="modal" data-target="#keywordsModal" onclick="renderKeywordsHeatmap()">
+                            <img src='img/wordcloud.png'>
+                        </a>
+                        <!-- <input class="search-box" type="text" id="search-box" onkeyup="searchOnEnter(event, this)" placeholder="keyword1, keyword2..."/> -->
+                    </div>
+                    <input class="search-box" type="text" id="search-box" onkeyup="searchOnEnter(event, this)" placeholder="keyword1, keyword2..."
+                    />
+                    <!-- <li>
+                           
+                        </li> -->
+                    <!-- </ul> -->
+                </div>
             </nav>
             <div class="arrow-down"></div>
             <div class="seperator">
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-
         </header>
+        <!-- <input class="search-box" type="text" id="search-box" onkeyup="searchOnEnter(event, this)" placeholder="keyword1, keyword2..."/> -->
 
         <div class="edit-area">
             <div class="edit-area-containor">
@@ -138,40 +143,43 @@
             </div>
     </footer>
     <form>
-        <div class="form-container">
-            <div class="form-fields-container">
-                <p class="form-title">Get In Touch
-                    <br>
-                    <span>In order to get in touch use the contact form below:</span>
-                </p>
-                <div class="form-group">
-                    <input class="form-control memgen" type="text" placeholder="Name (Required)">
+        <div class="form-main-container">
+            <p class="form-title">Get In Touch
+                <br>
+                <span>In order to get in touch use the contact form below:</span>
+            </p>
+            <div class="form-secondary-container">
+                <div class="form-fields-container">
+                    <div class="form-group">
+                        <input class="form-control memgen" type="text" placeholder="Name (Required)">
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="exampleFormControlInput1">Email address</label> -->
+                        <input type="email" class="form-control memgen" id="exampleFormControlInput1" placeholder="Email (Required)">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control memgen" type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control memgen" id="exampleFormControlTextarea1" rows="3" placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-memgen">Submit</button>
                 </div>
-                <div class="form-group">
-                    <!-- <label for="exampleFormControlInput1">Email address</label> -->
-                    <input type="email" class="form-control memgen" id="exampleFormControlInput1" placeholder="Email (Required)">
-                </div>
-                <div class="form-group">
-                    <input class="form-control memgen" type="text" placeholder="Subject">
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control memgen" id="exampleFormControlTextarea1" rows="3" placeholder="Write your message here..."></textarea>
-                </div>
-                <button type="submit" class="submit-memgen">Submit</button>
-            </div>
-            <div class="form-side-container">
-                <p><span>Quisque Hendrerit:</span> purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. 
-                    Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus morbi vitae.</p>
-                <div class="contact-details-container">
-                    <p class="contact-icons"> 
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </p>
-                    <p class="contact-details"> Elm St. 14/05 Lost City<br>
-                        + 3528 331 86 35<br>
-                        info@hexalcorp.com
-                    </p>
+                <div class="form-side-container">
+                    <p>
+                        <span>Quisque Hendrerit:</span> purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
+                        Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus morbi vitae.</p>
+                    <div class="contact-details-container">
+                        <p class="contact-icons">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </p>
+                        <p class="contact-details"> Elm St. 14/05 Lost City
+                            <br> + 3528 331 86 35
+                            <br> info@hexalcorp.com
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

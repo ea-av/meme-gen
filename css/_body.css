@@ -59,3 +59,9 @@ li button:hover {
    color:#2eb398
  }
 
+
+ .modal-xl {
+    width: 90%;
+   max-width:1200px;
+  }
+
