@@ -3,7 +3,7 @@
 console.log('edit-meme');
 var canvas;
 var ctx;
-var textOnCanvas =document.querySelector('.text-area').innerText;
+var elTextOnCanvas = document.querySelector('.text-area').innerText;
 var xText = 50;
 var yText = 100;
 var gCurrImg;
@@ -49,7 +49,7 @@ function drawOnCanvas(imgSrc) {
 
         ctx.font = "50px 'Segoe UI'";
         ctx.fillStyle = 'white';
-        ctx.fillText(textOnCanvas, xText-400, yText-40);
+        ctx.fillText(elTextOnCanvas, xText-400, yText-40);
     };
 }
 
@@ -73,13 +73,13 @@ var isDown = false;
 
 textArea = document.querySelector(".text-area");
 textArea.style.position = "absolute";
-textArea.style.left = "400px";
-textArea.style.top = "150px";
-textArea.style.width = "350px";
-textArea.style.height = "30px";
-textArea.style.background = "none";
-textArea.style.border = "1px solid black";
-textArea.style.color = "blue";
+// textArea.style.left = "400px";
+// textArea.style.top = "150px";
+// textArea.style.width = "350px";
+// textArea.style.height = "30px";
+// textArea.style.background = "none";
+// textArea.style.border = "1px solid black";
+// textArea.style.color = "blue";
 
 document.body.appendChild(textArea);
 
@@ -119,7 +119,7 @@ document.addEventListener('mousemove', function(event) {
 textArea.addEventListener('keyup', (event)=> {
     var KeyID = event.keyCode;
     console.log (event);
-    textOnCanvas=document.querySelector('.text-area').innerText;
+    elTextOnCanvas=document.querySelector('.text-area').innerText;
     drawOnCanvas(gCurrImg);
 
 });

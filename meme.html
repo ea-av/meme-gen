@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="lib/normalize.css">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="css/meme.css">
     <link rel="stylesheet" href="lib/animate.css">
     <title>meme-gen</meme-gen>
@@ -24,10 +25,10 @@
             <nav>
                 <ul class="main-nav-left">
                     <li>
-                        <a>Portfolio</a>
+                        <a class="nav-link">Portfolio</a>
                     </li>
                     <li>
-                        <a>About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                 </ul>
                 <ul class="main-nav-center">
@@ -46,6 +47,11 @@
                 </ul>
             </nav>
             <div class="arrow-down"></div>
+            <div class="seperator">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
         </header>
 
 
@@ -80,7 +86,7 @@
                     <input class="font-size" type="range">
                 </p>
                 <p>color
-                    <input class="font-color" type="color">
+                    <input class="font-color" type="color" onclick="setFontColor(this)">
                 </p>
                 <p>shedow toogel
                     <input class="Text-shadow" type="checkbox">
@@ -89,14 +95,29 @@
                     <input class="" type="scrole">
                 </p>
 
-            </div>
-            <div class="close-butoon-container">
-                <button onclick="closeEditMod()"> facebook</button>
-                <button onclick="closeEditMod()"> save</button>
-                <button onclick="closeEditMod()"> do-things</button>
-                <!-- </div>
-                <div class="close-butoon-container"> -->
-                <button onclick="closeEditMod()"> close</button>
+                <div class="edit-area-img-container">
+                    <img class="edit-area-img" src="" alt="">
+                </div>
+
+                <!-- <div class="edit-func-container">
+                    <p>left-right
+                        <input class="LRC-selctor" type="radio"> </p>
+                    <p>font szie
+                        <input class="font-size" type="range">
+                    </p>
+                    <p>color
+                        <input class="font-color" type="color">
+                    </p>
+                    <p>shedow toogel
+                        <input class="Text-shadow" type="checkbox">
+                    </p>
+                    <p>font type
+                        <input class="" type="scrole">
+                    </p>
+
+                </div> -->
+                <div class="close-butoon-container"></div>
+                <button onclick="closeEditMod()"></button>
             </div>
         </div>
     </div>
@@ -115,15 +136,85 @@
     </div>
 
 
-    <footer>
+    <footer id="about">
         <div class="about-container">
-            <p></p>
-            <p></p>
-        </div>
-        <div class="midia-container">
-            <button></button>
-        </div>
+            <p class="footer-logo">
+                <img src="img/lr-logo.png">
+            </p>
+            <div class="about-text-container">
+                <p class="about-title">Team Left Right
+                    <br>
+                    <span>Where Loops Don't Always End</span>
+                </p>
+                <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor, nibh at sagittis tristique, enim
+                    magna pretium augue, eget consectetur sem dui non urna. Integer gravida, diam congue molestie fringilla,
+                    elit odio rhoncus turpis, ac dictum libero elit vel metus. Morbi egestas sit amet velit eget venenatis.
+                    Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue, eget consectetur sem dui non
+                    urna
+                </p>
+                <div class="social-media-container">
+                    <ul>
+                        <li>
+                            <img class="fb" src="img/facebook.png">
+                        </li>
+                        <li>
+                            <img class="twtr" src="img/twitter.png">
+                        </li>
+                        <li>
+                            <img class="goog" src="img/google.png">
+                        </li>
+                        <li>
+                            <img class="pint" src="img/pinterest.png">
+                        </li>
+                        <li>
+                            <img class="lnkd" src="img/linkedin.png">
+                        </li>
+                        <li>
+                            <img class="drib" src="img/dribble.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
     </footer>
+    <form>
+        <div class="form-container">
+            <div class="form-fields-container">
+                <p class="form-title">Get In Touch
+                    <br>
+                    <span>In order to get in touch use the contact form below:</span>
+                </p>
+                <div class="form-group">
+                    <input class="form-control memgen" type="text" placeholder="Name (Required)">
+                </div>
+                <div class="form-group">
+                    <!-- <label for="exampleFormControlInput1">Email address</label> -->
+                    <input type="email" class="form-control memgen" id="exampleFormControlInput1" placeholder="Email (Required)">
+                </div>
+                <div class="form-group">
+                    <input class="form-control memgen" type="text" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control memgen" id="exampleFormControlTextarea1" rows="3" placeholder="Write your message here..."></textarea>
+                </div>
+                <button type="submit" class="submit-memgen">Submit</button>
+            </div>
+            <div class="form-side-container">
+                <p><span>Quisque Hendrerit:</span> purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. 
+                    Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus morbi vitae.</p>
+                <div class="contact-details-container">
+                    <p class="contact-icons"> 
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </p>
+                    <p class="contact-details"> Elm St. 14/05 Lost City<br>
+                        + 3528 331 86 35<br>
+                        info@hexalcorp.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
 
 
     <script src="lib/jquery/jquery.js"></script>

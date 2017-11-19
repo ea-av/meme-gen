@@ -1,5 +1,78 @@
 footer {
     background-color: #2eb398;
     height: 340px;
-    display: flex
+    display: flex;
+    justify-content: center;
+    flex-direction: column
+}
+
+.about-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    /*flex-wrap: wrap;*/
+    align-self:center
+}
+
+.about-text-container {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: center
+}
+
+.about-text, .about-title {
+    /*width: 85%;*/
+    align-self:flex-start;
+    color: #d7fcf5;
+}
+
+.about-title {
+    font-size: 1.875rem;
+    line-height: 1.5rem
+}
+
+.about-title span{
+    font-size: 1.125rem;
+    color: #20816d;
+}
+
+.about-text {
+    font-size: 0.75rem;
+    font-family: "Lato";
+    text-align: justify;
+}
+
+.footer-logo {
+    align-self: center;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    min-width: 13rem
+}
+
+.social-media-container {
+    display: flex;
+    justify-content: flex-end;
+    align-self:flex-end;
+}
+
+.fb:hover {
+    opacity: 0.5;
+}
+.twtr:hover {
+    opacity: 0.5;
+}
+.goog:hover {
+    opacity: 0.5;
+}
+.pint:hover {
+    opacity: 0.5;
+}
+.lnkd:hover {
+    opacity: 0.5;
+}
+.drib:hover {
+    opacity: 0.5;
 }

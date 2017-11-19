@@ -1,0 +1,106 @@
+form {
+    height: 500px; 
+    background-color: #323232;
+    display: flex;
+}
+
+.form-container {
+    display: flex;
+    width: 68%;
+    margin: auto
+}
+
+.form-fields-container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-self: center
+}
+
+.form-control.memgen {
+    background-color: #454545;
+    color: #bebebe;
+    font-family: "Lato";
+    font-size: 0.75rem;
+    border-radius: 0;
+    border: 0;
+    width: 75%
+}
+
+.form-control.memgen:active {
+    outline :none;
+    /* outline-color: #2eb398; */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus, input:focus, .uneditable-input:focus {
+    border-color: rgba(46, 179, 152, 0.8) !important;;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(46, 179, 152, 0.6) !important;;
+    outline: 0 none !important;
+}
+
+.submit-memgen {
+    background-color: #2eb398;
+    border: 0;
+    border-radius:0;
+    font-family: "Lato";
+    font-size: 0.75rem;
+    color: #d7fcf5;
+    width: 5rem;
+    height: 2rem;
+    align-self: flex-end;
+    margin-right: 25%;
+}
+
+.submit-memgen:active {
+    border-color: rgba(46, 179, 152, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(46, 179, 152, 0.6);
+    outline: 0 none;
+    background-color: #247e6a;
+}
+
+.form-title {
+    width: 75%;
+    font-size: 1.875rem;
+    line-height: 1.5rem;
+    color: #e0e0e0
+}
+
+.form-title span {
+    font-size: 1.125rem;
+    color: #bebebe;
+}
+
+.form-side-container {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.form-side-container p {
+    color:#bebebe;
+    font-size: 0.75rem;
+    font-family: "Lato";
+    text-align: justify;
+}
+
+.form-side-container p span {
+    color:#e0e0e0;
+    font-weight: 900
+}
+
+.contact-details-container {
+    display: flex;
+}
+
+.contact-details{
+    margin-left: 1rem;
+}
+
+.form-side-container p.contact-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #2eb398
+}

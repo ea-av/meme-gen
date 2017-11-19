@@ -77,11 +77,20 @@ function renderImgs(imgs) {
     var strHtml = '';
     var elImgs = document.querySelector('.imgs-container');
     elImgs.innerHTML = strHtml;
+    var animateClass = '';
+    var animationId = 1
     imgs.forEach(function(el,idx) {
         setTimeout(function() {
             console.log(el);
+            if (animationId > 4) animationId = 1;
+            if (animationId === 1) animateClass = 'zoomInUp';
+            else if (animationId === 2) animateClass = 'bounceInRight';
+            else if (animationId === 3) animateClass = 'zoomInDown';
+            else animateClass = 'bounceInLeft';
+            animationId++;
+            console.log(animateClass);
             strHtml = `<div class="img-container">
-                        <img class="animated bounceInUp" id="${imgs[idx].id}" src="${imgs[idx].url}" onclick="openEditMod(this)" alt="">
+                        <img class="animated ${animateClass}" id="${imgs[idx].id}" src="${imgs[idx].url}" onclick="openEditMod(this)" alt="">
                        </div>`;
             elImgs.insertAdjacentHTML('beforeend', strHtml);
         }, idx * 50);
@@ -176,9 +185,17 @@ function renderKeywordsHeatmap() {
                               <ul class="modal-ul" style="display: flex; flex-wrap: wrap">`
     var keywordCount = countKeywords();
     var keyword = '';
+    var animateClass = '';
+    var animationId = 1;
     for (keyword in keywordCount) {
+            if (animationId > 4) animationId = 1;
+            if (animationId === 1) animateClass = 'zoomInUp';
+            else if (animationId === 2) animateClass = 'bounceInRight';
+            else if (animationId === 3) animateClass = 'zoomInDown';
+            else animateClass = 'bounceInLeft';
+            animationId++;
         strHtml += `<li>
-                       <button onclick="searchByKeywords('${keyword}')" style="font-size: ${0.75 * keywordCount[keyword]}rem">${keyword}</button>
+                       <button class="animated ${animateClass}" onclick="searchByKeywords('${keyword}')" style="font-size: ${0.75 * keywordCount[keyword]}rem">${keyword}</button>
                     </li>`;
     }
     strHtml += `</ul>
@@ -190,6 +207,8 @@ function renderKeywordsHeatmap() {
                 </div>`;
     elHeatmap.innerHTML = strHtml;
 }
+
+
 
 //=========
 
