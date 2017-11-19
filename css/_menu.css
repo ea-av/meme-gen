@@ -26,7 +26,7 @@ nav{
     align-items: center;
 }
 
-a {
+a, .nav-link {
     color: inherit;
     text-decoration: none;
 }
@@ -205,13 +205,8 @@ li{
     color: #2eb398 !important;
     cursor: default !important;
 }
-
-.main-nav-right li a {
-    font-family: "Lato" !important;
-}
-
-.main-nav-right li a:hover {
-    color: #2eb398 !important; 
+.main-nav-right a:hover {
+    color: #2eb398 !important;
     cursor: default !important;
 }
 
