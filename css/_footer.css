@@ -7,7 +7,7 @@ footer {
 }
 
 .about-container {
-    width: 85%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
     /*flex-wrap: wrap;*/
@@ -46,7 +46,10 @@ footer {
 
 .footer-logo {
     align-self: center;
-    width: 23%
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    min-width: 13rem
 }
 
 .social-media-container {
