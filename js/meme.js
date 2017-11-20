@@ -102,6 +102,7 @@ function renderImgs(imgs) {
             elImgs.insertAdjacentHTML('beforeend', strHtml);
         }, idx * 30);
     });
+    window.scrollTo(0,0);
 }
 
 // ===== SEARCH, FILTER AND RENDER SEARCHED IMAGES FOR SELECTION =====

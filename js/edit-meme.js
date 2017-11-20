@@ -33,7 +33,7 @@ function closeEditMod(elImg) {
     var elEditArea = document.querySelector('.edit-area');
     elEditArea.style.display = 'none';
     var elImgArea = document.querySelector('.imgs-container');
-    elImgArea.style.display = 'block';
+    elImgArea.style.display = 'flex';
 
 }
 
