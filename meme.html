@@ -60,23 +60,19 @@
         <!-- <input class="search-box" type="text" id="search-box" onkeyup="searchOnEnter(event, this)" placeholder="keyword1, keyword2..."/> -->
 
 
-        <div class="edit-area hidden">
+        <div class="edit-area">
             <div class="edit-area-containor">
-                <canvas width="400" height="400" id="canvas">
+                <canvas width="400px" height="400px" id="canvas">
                     <img class="edit-area-img" src="" alt=""> Sorry, no canvas available
                 </canvas>
                 <p class="text-area" contenteditable="true">
                     enter text
                 </p>
                 <!-- <br/> -->
-
-                <a href="#" download="puki.txt">HERE</a>
-
-                <hr />
-
-                <a href="#" id="download" onclick="downloadImg(this)">
-                    Download as image
-                </a>
+                <div class="download-icons">
+                    <a href="#" download="puki.txt"><img src="img/download.png"></a>
+                    <a href="#" id="download" onclick="downloadImg(this)"><img src="img/download.png"></a>
+                </div>
             </div>
 
             <!-- <div class="edit-area-img-container"> -->
@@ -86,20 +82,22 @@
 
             <div class="edit-func-container">
                 <p>left-right
-                    <button class="aline-left" onclick="alineLeft()"></button>
+                    <button class="aline-left" style="background-color:transparent; border:none" onclick="alineLeft()"><img src="img/left-align.png"></button>
+                    <button class="aline-left" style="background-color:transparent; border:none" onclick="alinecnter()"><img src="img/mid_align.png"></button>
+                    <button class="aline-left" style="background-color:transparent; border:none" onclick="alineright()"><img src="img/right-align.png"></button>
 
-                    <button class="aline-left" onclick="alinecnter()"></button>
-
-                    <button class="aline-left" onclick="alineright()"></button>
-                    
                     <!-- <input class="LRC-selctor" type="radio" onclick="setFontColor(this)"> -->
-                 </p>
+                </p>
                 <p>font szie
                     <input class="font-size" type="range" min="2" max="72" step="0.1" onclick="setFontSize(this)">
                     <span class="font-size-display"></span>
                 </p>
                 <p>
-                        <label for="colorWell">Color:</label>
+                    <button class="aline-left" onclick="" style="background-color:transparent; border:none"><img src="img/textL.png"></button>
+                    <button class="aline-left" onclick="" style="background-color:transparent; border:none"><img src="img/textS.png"></button>
+                </p>
+                <p>
+                    <label for="colorWell">Color:</label>
                     <input class="font-color" type="color" onclick="setFontColor(this)">
                 </p>
                 <p>shedow toogel
@@ -108,6 +106,13 @@
                 <p>font type
                     <input class="" type="scrole" onm="setFontType(this)">
                 </p>
+                <select class="fonts" onchange="">
+                    <option value="" disabled selected>Select Font</option>
+                    <option value="Vibur">MavenPro</option>
+                    <option value="Bubbler One">Lato</option>
+                    <option value="Mogra">TypeC</option>
+                    <option value="Varela Round">TypeD</option>
+                  </select>
 
                 <div class="edit-area-img-container">
                     <img class="edit-area-img" src="" alt="">
@@ -143,7 +148,7 @@
     </div>
     </div>
 
-   
+
     <div class="heatmap-container">
         <!--Keywords Modal-->
         <div class="modal fade" id="keywordsModal" tabindex="-1" role="dialog" aria-labelledby="keywordsModalLabel" aria-hidden="true"></div>
@@ -240,8 +245,8 @@
     <script src="js/meme.js"></script>
     <script>
         window.onbeforeunload = function () {
-            window.scrollTo(0,0);
-    };
+            window.scrollTo(0, 0);
+        };
     </script>
 </body>
 
