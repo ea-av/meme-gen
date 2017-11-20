@@ -65,3 +65,7 @@ li button:hover {
    max-width:1200px;
   }
 
+.hidden {
+    display: none
+}
+

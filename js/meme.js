@@ -77,6 +77,10 @@ renderImgs(gImgs);
 
 
 function renderImgs(imgs) {
+    var elImgArea = document.querySelector('.imgs-container');
+    var elEditArea = document.querySelector('.edit-area');
+    elEditArea.style.display = 'none';
+    elImgArea.style.display = 'flex';
     var strHtml = '';
     var elImgs = document.querySelector('.imgs-container');
     elImgs.innerHTML = strHtml;

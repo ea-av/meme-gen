@@ -18,9 +18,11 @@ var isDown = false;
 
 
 function openEditMod(elImg) {
+    var elImgArea = document.querySelector('.imgs-container');
     var elEditArea = document.querySelector('.edit-area');
     var elEditAreaImg = document.querySelector('.edit-area-img');
     elEditArea.style.display = 'flex';
+    elImgArea.style.display = 'none';
     elEditAreaImg.src = `img/${elImg.id}.jpg`;
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
