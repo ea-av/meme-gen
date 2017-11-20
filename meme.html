@@ -62,7 +62,7 @@
 
         <div class="edit-area">
             <div class="edit-area-containor">
-                <canvas width="600" height="400" id="canvas">
+                <canvas width="400" height="400" id="canvas">
                     <img class="edit-area-img" src="" alt=""> Sorry, no canvas available
                 </canvas>
                 <p class="text-area" contenteditable="true">
@@ -86,18 +86,27 @@
 
             <div class="edit-func-container">
                 <p>left-right
-                    <input class="LRC-selctor" type="radio"> </p>
+                    <button class="aline-left" onclick="alineLeft()"></button>
+
+                    <button class="aline-left" onclick="alinecnter()"></button>
+
+                    <button class="aline-left" onclick="alineright()"></button>
+                    
+                    <!-- <input class="LRC-selctor" type="radio" onclick="setFontColor(this)"> -->
+                 </p>
                 <p>font szie
-                    <input class="font-size" type="range">
+                    <input class="font-size" type="range" min="2" max="72" step="0.1" onclick="setFontSize(this)">
+                    <span class="font-size-display"></span>
                 </p>
-                <p>color
+                <p>
+                        <label for="colorWell">Color:</label>
                     <input class="font-color" type="color" onclick="setFontColor(this)">
                 </p>
                 <p>shedow toogel
-                    <input class="Text-shadow" type="checkbox">
+                    <input class="Text-shadow" type="checkbox" onclick="setFontShedow(this)">
                 </p>
                 <p>font type
-                    <input class="" type="scrole">
+                    <input class="" type="scrole" onm="setFontType(this)">
                 </p>
 
                 <div class="edit-area-img-container">

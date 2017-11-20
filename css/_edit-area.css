@@ -4,8 +4,8 @@
     height: 50%;
     padding: 20px 0 20px 0;
     margin: 90px 0 0 0;
-    background-color: blue;
-    color: yellowgreen;
+    background-color: #2eb398;
+    color: #d7fcf5;
     display: none;
     flex-direction: column;
     
@@ -16,8 +16,6 @@
     align-content: center;
     align-items: center;
     flex-flow: column nowrap;
-    border: 3px solid greenyellow;
-    border-radius: 10%;
 }
 
 .edit-func-container{
@@ -47,16 +45,17 @@
 
 .text-area{
     left: 400px;
-    top: 150px;
+    top: 200px;
      width: 350px;
     height: 30px;
     background: none;
     border: 1px solid black;
     order: 1;
-    color: white;
+    color: transparent;
     background-color: transparent;
     position: absolute;
     font-size: 2em;
+    text-align: center;
      
     /* padding-top: 20px; */
 }
