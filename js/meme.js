@@ -256,13 +256,13 @@ function renderKeywordsHeatmap() {
 
 document.querySelector(".arrow").addEventListener("click", function () {
     document.querySelector(".arrow").classList.add("animated", "flipInX");
-    removeCssAnimationClass("arrow", "animated", "flipInX");
+    removeCssAnimationClass("animated", "flipInX");
 
 });
 
-function removeCssAnimationClass(selector, classA, classB) {
+function removeCssAnimationClass(classA, classB) {
     setTimeout(function () {
-        document.querySelector(".selector").classList.remove(classA, classB);
+        document.querySelector(".arrow").classList.remove(classA, classB);
     }, 400);
 }
 
