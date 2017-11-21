@@ -97,7 +97,7 @@ function renderImgs(imgs) {
             animationId++;
             console.log(animateClass);
             strHtml = `<div class="img-container">
-                        <img class="animated ${animateClass}" id="${imgs[idx].id}" src="${imgs[idx].url}" onclick="openEditMod(this)" alt="">
+                        <img class="animated ${animateClass}" id="${imgs[idx].id}" src="${imgs[idx].url}" onclick="openEditMod(this)" onmouseover="flip(this)" alt="">
                        </div>`;
             elImgs.insertAdjacentHTML('beforeend', strHtml);
         }, idx * 30);
@@ -256,13 +256,13 @@ function renderKeywordsHeatmap() {
 
 document.querySelector(".arrow").addEventListener("click", function () {
     document.querySelector(".arrow").classList.add("animated", "flipInX");
-    removeCssAnimationClass("animated", "flipInX");
+    removeCssAnimationClass("arrow", "animated", "flipInX");
 
 });
 
-function removeCssAnimationClass(classA, classB) {
+function removeCssAnimationClass(selector, classA, classB) {
     setTimeout(function () {
-        document.querySelector(".arrow").classList.remove(classA, classB);
+        document.querySelector(".selector").classList.remove(classA, classB);
     }, 400);
 }
 
@@ -273,3 +273,18 @@ document.querySelector(".arrow").addEventListener("mouseenter", function () {
 document.querySelector(".arrow").addEventListener("mouseleave", function () {
     document.querySelector(".arrow").classList.remove("animated", "jello");
 });
+function flip(el) {
+    if (el.className) el.className = "";
+    el.classList.add('animated','flip');
+    setTimeout(function () {
+        el.className = "";
+        console.log('animate remove')
+    }, 800);
+}
+    // el.addEventListener("mouseleave", function () {
+    //     el.className = "";
+    // });
+// document.querySelector("header").addEventListener("mouseenter", function () {
+    // console.log(el);
+// });
+
