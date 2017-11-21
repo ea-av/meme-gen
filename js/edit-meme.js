@@ -18,6 +18,7 @@ var isDown = false;
 
 
 function openEditMod(elImg) {
+    window.scrollTo(0,0);
     var elImgArea = document.querySelector('.imgs-container');
     var elEditArea = document.querySelector('.edit-area');
     var elEditAreaImg = document.querySelector('.edit-area-img');
