@@ -2,6 +2,9 @@
 
 //Global variable here
 var gImgs = [];
+var audioFlip2 = new Audio('sounds/2.mp3');
+var audioFlip5 = new Audio('sounds/5.mp3');
+var audioFlip4 = new Audio('sounds/4.mp3');
 // var gImgs = [
 //     {id:1, url:'img/1-t.jpg', keyword:['wilder', 'sad', 'emotional', 'famous', 'cute']},
 //     {id:2, url:'img/2-t.jpg', keyword:['sean bean', 'happy', 'lively', 'smug', 'rich']},
@@ -276,6 +279,7 @@ document.querySelector(".arrow").addEventListener("mouseleave", function () {
 function flip(el) {
     if (el.className) el.className = "";
     el.classList.add('animated','flip');
+    audioFlip2.play();
     setTimeout(function () {
         el.className = "";
         console.log('animate remove')
