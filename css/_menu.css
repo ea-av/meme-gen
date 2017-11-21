@@ -187,10 +187,18 @@ li.contact{
     display:flex;
     justify-content: flex-end
 } */
-
-/* wordcloud {
-    margin-right:113px
-} */
+ /*.wordcloud:hover {*/
+    /*border: 1px solid #2eb398*/
+    /*background-color: #2eb398;
+    height: 30px*/
+    /*margin:auto;*/
+    /*align-self: center;*/
+/*} */
+ .wordcloud img:active {
+    width:95%;
+    /*margin:auto;*/
+    /*align-self: center;*/
+} 
 
 li{
     display: flex;
