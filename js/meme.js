@@ -281,10 +281,5 @@ function flip(el) {
         console.log('animate remove')
     }, 800);
 }
-    // el.addEventListener("mouseleave", function () {
-    //     el.className = "";
-    // });
-// document.querySelector("header").addEventListener("mouseenter", function () {
-    // console.log(el);
-// });
+
 
